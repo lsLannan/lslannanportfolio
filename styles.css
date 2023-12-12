@@ -19,29 +19,35 @@ html {
     justify-content: flex-end;
     padding: 1rem 0;
 
-    gap: 51rem; /* hacky way to center title and float right menu */
+    gap: 51rem;  /* hacky way to center title and float right menu */
 }
 
 .title {
     font-family: 'Major Mono Display', monospace;
+}
 
+.myName {
+    justify-self: center;
 }
 
 #hamburger {
     margin-right: 2rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    justify-self: flex-end;
 }
 /* INTRO */
 .intro {
     background-color: #B8A2E0;
     display: flex;
     flex-direction: row;
+    height: 30rem;
 }
 
 .intro-text {
     width: 70%;
     margin: 2rem 5rem;
     margin-left: 10rem;
+    margin-right: 0;
     display: flex;
     flex-direction: column;
     font-size: 2rem;
@@ -50,12 +56,12 @@ html {
 }
 
 .avatar {
-    width: 25%;
+    width: 30%;
     margin-right: 6rem;
 }
 
 .star-cursor {
-    cursor: url('clean_685173.png'), auto;
+    cursor: url("images/clean_685173.png"), auto;
 }
 
 /* SKILLS */
@@ -65,7 +71,7 @@ html {
     flex-direction: column;
     height: 20rem;
     margin-top: 5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
     margin-left: 5rem;
 
     /*border: 1px solid hotpink;*/
@@ -75,7 +81,7 @@ html {
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 2.5rem;
 
     /*border: 1px solid green;*/
 }
@@ -83,7 +89,7 @@ html {
 .skills .icons {
     margin-top: 2rem;
     margin-left: 2rem;
-    font-size: 4rem;
+    font-size: 5rem;
     /*flex-shrink: 3;*/
 }
 
@@ -92,7 +98,7 @@ html {
 }
 
 .skills h3 {
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 /* PROJECTS */
@@ -100,11 +106,12 @@ html {
     display: flex;
     flex-direction: column;
     margin-bottom: 5rem;
-    margin-left: 5rem;
+
 }
 
 .projects h3 {
-    font-size: 3rem;    
+    font-size: 3rem;   
+    margin-left: 5rem; 
 }
 
 .projects-title {
@@ -116,20 +123,36 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 2rem;
+    margin-top: 5rem;
 }
 
 .project-card {
     background-color: #B8A2E0;
     box-shadow: 20px 20px black;
     color: whitesmoke;
-    width: 25%;
-    height: 25rem;
-    overflow: hidden;
+    width: 30%;
+    height: 35rem;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+    border: 5px solid #B8A2E0;
 }
 
 .project-card img {
-    height: 75%;
+    height: 100%;
+    width: 100%;
+}
+
+.project-card ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.stack-used {
+    list-style-type: none;
 }
 
 /* CONTACT ME */

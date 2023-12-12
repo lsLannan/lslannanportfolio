@@ -7,69 +7,80 @@
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" async></script>
     <script src="https://kit.fontawesome.com/804b0d1bc4.js" crossorigin="anonymous"></script>
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@1,200&family=Major+Mono+Display&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>LSLANNAN</h1>
+    <header class="header">
+        <h1 class="title">LSlannan</h1>
         <!--nav hamburger icon-->
-        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-bars" id="hamburger"></i>
     </header>
 
     <div class="main">
 
         <div class="intro">
-            <h2>Hi, I'm Liberty</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore vel voluptate quo? Molestias veritatis perferendis praesentium laudantium ut! Eaque porro numquam unde neque. Temporibus nesciunt omnis harum qui excepturi quasi!</p>
-            <img src="images/avatar-stars.png" alt="blue haired cartoon woman with stars framing them">
+            <div class="intro-text">
+                <h2>Hi, I'm Liberty</h2>
+                <h4>Front End Development</h4>
+                <p>Enthusiastic final year Computer Science student and aspiring Front End Developer with a commitment to continuous learning. Proficient in HTML and CSS. Also experienced with JavaScript, React and PHP. Passionate about the intersection of technology, design, and accessibility. I am excited to build upon these skills and develop professionally in a supportive team.</p>
+            </div>
+            <img src="images/avatar-stars.png" class="avatar" alt="blue haired cartoon woman with stars framing them">
         </div>
 
         <div class="skills">
-            <h3>SKILLS</h3>
+            <h3 class="title">SKILLS</h3>
+            <i class="fa-solid fa-toolbox fa-2xl"></i>
             <!--html icon-->
-            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-html5 fa-2xl"></i>
             <!--css icon-->
-            <i class="fa-brands fa-css3-alt"></i>
+            <i class="fa-brands fa-css3-alt fa-2xl"></i>
             <!--js icon-->
-            <i class="fa-brands fa-js"></i>
+            <i class="fa-brands fa-js fa-2xl"></i>
             <!--react icon-->
         </div>
 
-        <div class="PROJECTS">
-            <h3>PROJECTS</h3>
+        <div class="projects">
+            <h3 class="title">PROJECTS</h3>
+            <i class="fa-solid fa-file"></i>
 
-            <div class="project-card">
-                <h4>Project Title</h4>
-                <img src="#">
-                <p>Info</p>
-            </div>
+            <div class="project-container">
+                <div class="project-card">
+                    <h4>Project Title</h4>
+                    <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                    <p>Info</p>
+                </div>
 
-            <div class="project-card">
-                <h4>Project Title</h4>
-                <img src="#">
-                <p>Info</p>
-            </div>
+                <div class="project-card">
+                    <h4>Project Title</h4>
+                    <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                    <p>Info</p>
+                </div>
 
-            <div class="project-card">
-                <h4>Project Title</h4>
-                <img src="#">
-                <p>Info</p>
+                <div class="project-card">
+                    <h4>Project Title</h4>
+                    <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                    <p>Info</p>
+                </div>
             </div>
 
         </div>
 
         <div class="contact-me">
-            <h3>CONTACT ME</h3>
+            <h3 class="title">CONTACT ME</h3>
             <p>Want to talk? Shoot me a message!</p>
             <!--github icon-->
-            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-github fa-2xl"></i>
             <!--LinkedIn icon-->
-            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-linkedin fa-2xl"></i>
             <!--gmail icon-->
-            <i class="fa-solid fa-envelope"></i>
+            <i class="fa-solid fa-envelope fa-2xl"></i>
         </div>
     </div>
 
-    <footer>
+    <footer class="footer">
         <p>Hi, I'm a footer &lt3</p>
     </footer>
     

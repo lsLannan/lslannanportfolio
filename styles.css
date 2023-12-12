@@ -2,3 +2,168 @@
     padding: 0;
     margin: 0;
 }
+
+html {
+    font-family: 'JetBrains Mono', monospace, sans-serif;
+    font-size: 16px;
+    color: black;
+    background-color: whitesmoke;
+}
+
+/* HEADER */
+.header {
+    background-color: #7459BF;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    padding: 1rem 0;
+
+    gap: 51rem; /* hacky way to center title and float right menu */
+}
+
+.title {
+    font-family: 'Major Mono Display', monospace;
+
+}
+
+#hamburger {
+    margin-right: 2rem;
+    font-size: 2rem;
+}
+/* INTRO */
+.intro {
+    background-color: #B8A2E0;
+    display: flex;
+    flex-direction: row;
+}
+
+.intro-text {
+    width: 70%;
+    margin: 2rem 5rem;
+    margin-left: 10rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+
+    justify-content: center;
+}
+
+.avatar {
+    width: 25%;
+    margin-right: 6rem;
+}
+
+.star-cursor {
+    cursor: url('clean_685173.png'), auto;
+}
+
+/* SKILLS */
+.skills {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    height: 20rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    margin-left: 5rem;
+
+    /*border: 1px solid hotpink;*/
+}
+
+.skills-title {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding-bottom: 2rem;
+
+    /*border: 1px solid green;*/
+}
+
+.skills .icons {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    font-size: 4rem;
+    /*flex-shrink: 3;*/
+}
+
+.skills i:hover {
+    color: #7459BF;
+}
+
+.skills h3 {
+    font-size: 3rem;
+}
+
+/* PROJECTS */
+.projects {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+    margin-left: 5rem;
+}
+
+.projects h3 {
+    font-size: 3rem;    
+}
+
+.projects-title {
+    display: flex;
+    flex-direction: row;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background-color: #B8A2E0;
+    box-shadow: 20px 20px black;
+    color: whitesmoke;
+    width: 25%;
+    height: 25rem;
+    overflow: hidden;
+}
+
+.project-card img {
+    height: 75%;
+}
+
+/* CONTACT ME */
+.contact-me {
+    display: flex;
+    flex-direction: column;
+    height: 15rem;
+    margin-left: 5rem;
+}
+
+.contact-me h3 {
+    font-size: 3rem;
+}
+
+.contact-me p {
+    margin-top: 1rem;
+}
+
+.contact-me .icons {
+    font-size: 2rem;
+    margin: 3rem 0 0 2rem;
+}
+
+.contact-me a {
+    text-decoration: none;
+    color: black;
+}
+
+.contact-me a:hover {
+    color: #7459BF;
+}
+/* FOOTER */
+.footer {
+    background-color: #FFBD59 ;
+    text-align: right;
+    padding: 25px;
+}

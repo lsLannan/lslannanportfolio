@@ -8,6 +8,7 @@ html {
     font-size: 16px;
     color: black;
     background-color: whitesmoke;
+    cursor: url('images/star-regular.svg'), auto;
 }
 
 /* HEADER */
@@ -16,10 +17,21 @@ html {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: flex-end;
+    justify-content: flex-start;
     padding: 1rem 0;
 
-    gap: 51rem;  /* hacky way to center title and float right menu */
+    /*gap: 51rem; hacky way to center title and float right menu */
+}
+
+.header-title-menu {
+    /*border: 1px solid green;*/
+
+    width: 50%;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 51px;
 }
 
 .title {
@@ -29,12 +41,63 @@ html {
 .myName {
     justify-self: center;
 }
+/* menu */
+
+mark {
+    background-color: whitesmoke;
+}
 
 #hamburger {
-    margin-right: 2rem;
     font-size: 2.5rem;
     justify-self: flex-end;
 }
+
+.nav {
+    height: 250px; /* Specify a height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #FFBD59; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the side panel */
+  }
+
+.nav li {
+    list-style-type: none;
+}
+
+.nav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: white;
+}
+
+.nav .close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;   
+}
+
+.open-btn {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border: none;
+  }
+
+
 /* INTRO */
 .intro {
     background-color: #B8A2E0;
@@ -50,7 +113,7 @@ html {
     margin-right: 0;
     display: flex;
     flex-direction: column;
-    font-size: 2rem;
+    font-size: 1.5rem;
 
     justify-content: center;
 }
@@ -58,10 +121,6 @@ html {
 .avatar {
     width: 30%;
     margin-right: 6rem;
-}
-
-.star-cursor {
-    cursor: url("images/clean_685173.png"), auto;
 }
 
 /* SKILLS */
@@ -82,23 +141,38 @@ html {
     flex-direction: row;
     gap: 2rem;
     padding-bottom: 2.5rem;
+    margin-bottom: 2rem;
 
     /*border: 1px solid green;*/
+}
+
+.skills i {
+    padding-top: 2rem;
 }
 
 .skills .icons {
     margin-top: 2rem;
     margin-left: 2rem;
     font-size: 5rem;
-    /*flex-shrink: 3;*/
+    display: flex;
+    flex-shrink: 5;
+    gap: 2rem;
 }
 
 .skills i:hover {
     color: #7459BF;
+    cursor: url('images/star-solid.svg'), auto;
 }
 
 .skills h3 {
     font-size: 4rem;
+}
+
+/* mobile */
+@media only screen and (max-width: 800px) {
+.icons {
+    flex-shrink: 1;
+}
 }
 
 /* PROJECTS */
@@ -119,31 +193,61 @@ html {
     flex-direction: row;
 }
 
+.projects-title i {
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+}
+
+
 .project-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
-    margin-top: 5rem;
+    margin: 5rem 1rem 0 5rem;
 }
 
 .project-card {
     background-color: #B8A2E0;
-    box-shadow: 20px 20px black;
     color: whitesmoke;
-    width: 30%;
-    height: 35rem;
-    overflow: auto;
+    width: 30rem;
+    height: 30rem;
     display: flex;
     flex-direction: column;
     align-content: center;
+    transition: box-shadow 2s ;
+    margin: 1rem;
+    position: relative;
 
     border: 5px solid #B8A2E0;
 }
+
+.project-overview {
+    color: whitesmoke;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    display: none;
+}
+
+.visit-btn {
+    background-color: #FFBD59;
+    padding: 1rem 4rem;
+    border-radius: 15px;
+}
+
 
 .project-card img {
     height: 100%;
     width: 100%;
 }
+
+/*
+.project-card img:hover {
+    opacity: 10%;
+}*/
 
 .project-card ul {
     display: flex;
@@ -151,8 +255,29 @@ html {
     gap: 1rem;
 }
 
+.project-card:hover {
+    box-shadow: 20px 20px black;
+    /*cursor: url('images/star-solid.svg'), auto;*/
+}
+
+
+
 .stack-used {
     list-style-type: none;
+}
+
+/* DESIGNS */
+#snow-poster {
+    height: 700px;
+    width: 600px;
+}
+
+/* mobile */
+
+@media only screen and (max-width: 500px) {
+    .project-container {
+        flex-direction: column;
+    }
 }
 
 /* CONTACT ME */
@@ -172,8 +297,10 @@ html {
 }
 
 .contact-me .icons {
-    font-size: 2rem;
-    margin: 3rem 0 0 2rem;
+    font-size: 2.5rem;
+    margin: 3rem 0rem 0 2rem;
+    display: flex;
+    gap: 3rem;
 }
 
 .contact-me a {
@@ -183,6 +310,14 @@ html {
 
 .contact-me a:hover {
     color: #7459BF;
+    cursor: url('images/star-solid.svg'), auto;
+}
+
+/* mobile */
+@media only screen and (max-width: 800px) {
+    .contact-me {
+        justify-content: center;
+    }
 }
 /* FOOTER */
 .footer {

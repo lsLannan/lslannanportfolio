@@ -13,27 +13,46 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@1,200&family=Major+Mono+Display&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header star-cursor">
-            <h1 class="title myName">LSlannan</h1>
+    <header class="header">
+        <div class="header-title-menu">
             <!--nav hamburger icon-->
-            <i class="fa-solid fa-bars" id="hamburger"></i>
+            <a class="open-btn" onclick="openNav()"><i class="fa-solid fa-bars" id="hamburger"></i></a>
+            
+            <nav class="nav" id="side-panel">
+                <ul>
+                    <li><a href="javascript:void(0)" class="close-btn" onclick="closeNav()">X</a></li>
+                    <li><a href="#intro">Intro</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#designs">Designs</a></li>
+                    <li><a href="#contact-me">Contact</a></li>
+                </ul>
+            </nav>
+
+
+
+            <h1 class="title myName" id="name-header"onclick="changeText()">LSlannan</h1>
+        </div>
     </header>
 
     <div class="main">
 
-        <div class="intro">
+        <div class="intro" id="intro">
             <div class="intro-text">
-                <h2>Hi, I'm Liberty</h2>
-                <h4>Front End Development</h4>
-                <p>Passionate about the intersection of technology, design, and accessibility. I am excited to build upon these skills and develop professionally in a supportive team.</p>
+                <h1>Hi, I'm <mark>Liberty</mark></h1>
+                <h2>Front End Development</h2>
+                <p>Passionate about the intersection of technology, design, and accessibility. 
+                    I am excited to build upon these skills and develop professionally in a 
+                    supportive team.
+                </p>
             </div>
             <img src="images/avatar-stars.png" class="avatar" alt="blue haired cartoon woman with stars framing them">
         </div>
 
-        <div class="skills">
+        <div class="skills" id="skills">
             <div class="skills-title">
                 <h3 class="title">SKILLS</h3>
-                <!--<i class="fa-solid fa-toolbox fa-2xl"></i>-->
+                <i class="fa-solid fa-toolbox fa-2xl"></i>
             </div>
 
             <div class="icons">
@@ -44,22 +63,29 @@
                 <!--js icon-->
                 <i class="fa-brands fa-js fa-2xl" title="JavaScript"></i>
                 <!--react icon-->
-                <i class="fa-brands fa-react" title="React.js"></i>
-                <i class="fa-brands fa-php" title="PHP"></i>
-                <i class="fa-brands fa-java" title="Java"></i>
+                <i class="fa-brands fa-react fa-2xl" title="React.js"></i>
+                <i class="fa-brands fa-php fa-2xl" title="PHP"></i>
+                <i class="fa-brands fa-java fa-2xl" title="Java"></i>
             </div>
         </div>
 
-        <div class="projects">
+        <div class="projects" id="projects">
             <div class="projects-title">
                 <h3 class="title">PROJECTS</h3>
-                <!--<i class="fa-solid fa-file"></i>-->
+                <i class="fa-solid fa-file fa-2xl"></i>
             </div>
 
             <div class="project-container">
                 <div class="project-card">
                     <!--<h4>Skincare Brand Homepage</h4>-->
-                    <a href="https://lslannan.github.io/codecademy-company-homepage/" target="_blank"><img src="images/skincare-homepage.png"></a>
+                    <a href="https://lslannan.github.io/codecademy-company-homepage/" target="_blank"><img src="images/blush-homepage.png"></a>
+                    
+                    <div class="project-overview">
+                        <h4>Blush Homepage</h4>
+                        <p>Flexbox project</p>
+                        <button class="visit-btn">Visit</button>
+                    </div>
+
                 </div>
 
                 <div class="project-card">
@@ -82,22 +108,40 @@
 
         </div>
 
-        <div class="contact-me">
+        <!--<div class="projects" id="designs">
+            <div class="projects-title">
+                <h3 class="title">Designs</h3>
+            </div>
+
+            <div class="project-container">
+                <div class="project-card">
+                    <img src="images/snow-sports-logo.png">
+                </div>
+    
+                <div class="project-card" id="snow-poster">
+                    TODO: replace with watermark free version pls
+                    <img src="images/snow-sports-poster.png">
+                </div>
+            </div>
+
+        </div>-->
+
+        <div class="contact-me" id="contact-me">
             <h3 class="title">CONTACT ME</h3>
             <p>Want to talk? Shoot me a message!</p>
             <!--github icon-->
             <div class="icons">
-                <a href="https://github.com/lsLannan" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
+                <a href="https://github.com/lsLannan" target="_blank"><i class="fa-brands fa-github fa-2xl" title="My GitHub"></i></a>
                 <!--LinkedIn icon-->
-                <a href="https://www.linkedin.com/in/liberty-l-02bb8326b/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+                <a href="https://www.linkedin.com/in/liberty-l-02bb8326b/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl" title="My LinkedIn"></i></a>
                 <!--gmail icon-->
-                <a href="mailto:liberty.lannan@gmail.com" target="_blank"><i class="fa-solid fa-envelope fa-2xl"></i></a>
+                <a href="mailto:liberty.lannan@gmail.com" target="_blank"><i class="fa-solid fa-envelope fa-2xl" title="Email me"></i></a>
             </div>
         </div>
     </div>
 
     <footer class="footer">
-        <p>Hi, I'm a footer &lt3</p>
+        <p>Designed in Figma & coded with &lt3</p>
     </footer>
     
 </body>

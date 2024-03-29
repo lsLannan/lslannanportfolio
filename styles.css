@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+:root {
+    --main-purple-color: #7459BF;
+}
+
 html {
     font-family: 'JetBrains Mono', monospace, sans-serif;
     font-size: 16px;
@@ -13,7 +17,7 @@ html {
 
 /* HEADER */
 .header {
-    background-color: #7459BF;
+    background-color: var(--main-purple-color);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -40,6 +44,10 @@ html {
 
 .myName {
     justify-self: center;
+}
+
+#name-header:hover {
+    cursor: url('images/star-solid.svg'), auto;
 }
 /* menu */
 
@@ -160,7 +168,7 @@ mark {
 }
 
 .skills i:hover {
-    color: #7459BF;
+    color: var(--main-purple-color);
     cursor: url('images/star-solid.svg'), auto;
 }
 
@@ -218,6 +226,7 @@ mark {
     transition: box-shadow 2s ;
     margin: 1rem;
     position: relative;
+    box-shadow: 20px 20px black;
 
     border: 5px solid #B8A2E0;
 }
@@ -255,11 +264,11 @@ mark {
     gap: 1rem;
 }
 
+/*
 .project-card:hover {
     box-shadow: 20px 20px black;
-    /*cursor: url('images/star-solid.svg'), auto;*/
-}
-
+    /*cursor: url('images/star-solid.svg'), auto;
+} */
 
 
 .stack-used {
@@ -309,7 +318,7 @@ mark {
 }
 
 .contact-me a:hover {
-    color: #7459BF;
+    color: var(--main-purple-color);
     cursor: url('images/star-solid.svg'), auto;
 }
 

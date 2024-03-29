@@ -11,10 +11,10 @@ function openNav() {
   }
 
   /* change text of header */
-let headerTitle = document.getElementById("name-header");
+const headerTitle = document.getElementById("name-header");
 
 function changeText() {
-    headerTitle.innerHTML = 'HEllo WOrld';
+    headerTitle.innerText = 'HEllo WOrld';
   }
 
   /* event handler */
